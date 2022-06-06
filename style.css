@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(rgb(30, 30, 30), #0f0f0f);
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background: #3e3e3e;
+    box-shadow: 0 0 0 4px #303030;
+    border-radius: 75px;
+}
+
+label input {
+    appearance: none;
+}
+
+label div {
+    position: absolute;
+    left: 0;
+    width: 175px;
+    height: 150px;
+    background: url(images/Coffee_01.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transition: 1.5s;
+    transform: rotate(-180deg);
+    transform-origin: 75px;
+}
+
+label input:checked ~ div {
+    left: 235px;
+    background: url(images/Coffee_02.png);
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    transform: rotate(360deg);
+}
+
+label span {
+    position: absolute;
+    left: -100px;
+    color: white;
+    font-family: consolas;
+    text-transform: uppercase;
+    font-size: 3em;
+    filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+}
+
+label input:checked ~ span {
+    color: #3e3e3e;
+    /* color: #8f8f8f; */
+    transition: 1s;
+    filter: none;
+}
+
+label input:checked ~ span:last-child {
+    filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+    color: white;
+    transition: 1s;
+}
+
+label span:last-child {
+    position: absolute;
+    left: initial;
+    right: -100px;
+    color: #3e3e3e;
+    /* color: #8f8f8f; */
+    filter: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100%;
+    }
+    label {
+        width: 225px;
+    }
+
+    label div {
+        left: -15px;
+        width: 125px;
+        height: 125px;
+        background-size: auto 125px;
+    }
+
+    label input:checked ~ div {
+        left: 75px;
+        background-size: auto 125px;
+    }
+
+    label span {
+        left: -55px;
+        font-size: 2.5em;
+    }
+
+    label span:last-child {
+        right: -75px;
+        font-size: 2.5em;
+    }
+}
