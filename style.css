@@ -87,32 +87,21 @@ label span:last-child {
     body {
         overflow: hidden;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
     }
 
     label {
-        width: 225px;
+        width: 400px;
+        height: 150px;
     }
 
-    label div {
-        left: -15px;
-        width: 125px;
-        height: 125px;
-        background-size: auto 125px;
+    label span:nth-child(4) {
+        right: 20px;
+        top: -100px;
     }
 
-    label input:checked ~ div {
-        left: 75px;
-        background-size: auto 125px;
-    }
-
-    label span {
-        left: -55px;
-        font-size: 2.5em;
-    }
-
-    label span:last-child {
-        right: -75px;
-        font-size: 2.5em;
+    label span:nth-child(3) {
+        left: 20px;
+        top: -100px;
     }
 }
